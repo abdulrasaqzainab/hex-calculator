@@ -4,10 +4,8 @@
 
 This project forms part of the workshop assignment and focuses on the development of a **Hexadecimal Calculator** using the **Test-Driven Development (TDD)** approach.
 
----
 # Functional Requirements
 
----
 | **Category** | **Functional Requirements** |
 |---|---|
 | **Arithmetic Operations** | **FR 1: Addition (FR 1.1–FR 1.3)** – Perform hexadecimal addition including handling zero and mixed sign values.<br><br> **FR 2: Subtraction (FR 2.1–FR 2.3)** – Perform subtraction and return 0 when the result would be negative.<br><br> **FR 3: Multiplication (FR 3.1–FR 3.3)** – Perform multiplication including handling multiplication by 0 and 1.<br><br> **FR 4: Division (FR 4.1–FR 4.3)** – Perform division, truncate decimal results, and prevent division by zero.<br><br> **FR 5: Operation Behaviour (FR 5.1–FR 5.3)** – Support chained operations and correctly handle commutative and non-commutative arithmetic rules. |
