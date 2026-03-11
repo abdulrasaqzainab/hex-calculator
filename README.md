@@ -16,5 +16,3 @@ This project forms part of the workshop assignment and focuses on the developmen
 | **Clear / Deletion Operations** | **FR 11.1:** Provide a clear-all button (AC) that resets the entire calculator state.<br><br> **FR 11.2:** Provide a clear-entry button (CE) that removes only the most recently entered digit or operand. |
 | **Calculation History** | **FR 12.1:** Store the last five completed calculations.<br><br> **FR 12.2:** Allow the user to view stored calculation history.<br><br> **FR 12.3:** Store each history entry as the full expression and result (e.g., A3 + 1B = BE). |
 | **Result Handling** | **FR 10.1:** Provide an equals button that evaluates the current expression.<br><br> **FR 10.2:** Display the computed result after evaluation.<br><br> **FR 10.3:** Allow the computed result to be reused as the first operand in the next calculation. |
-
----
