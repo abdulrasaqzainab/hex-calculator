@@ -233,7 +233,7 @@ describe("Result Handling", () => {
 		calc.pressDigit("A");
 		calc.pressOperator("+");
 		calc.pressDigit("1");
-		calc.pressEquals(); // result = B
+		calc.pressEquals();
 
 		calc.pressOperator("+");
 		calc.pressDigit("1");
