@@ -182,6 +182,104 @@ describe("Button-Based Interface", () => {
 	});
 });
 
+describe("Display Behaviour", () => {
+	it("FR 9.1 displays current operand as input is entered", () => {
+		const calc = new HexCalculatorEngine();
+
+		calc.pressDigit("A");
+		expect(calc.getDisplay()).toBe("A");
+
+		calc.pressDigit("F");
+		expect(calc.getDisplay()).toBe("AF");
+	});
+
+	it("FR 9.2 displays ongoing expression while being built", () => {
+		const calc = new HexCalculatorEngine();
+
+		calc.pressDigit("A");
+		calc.pressOperator("+");
+
+		expect(calc.getExpression()).toBe("A +");
+	});
+
+	it("FR 9.3 updates display immediately after each button press", () => {
+		const calc = new HexCalculatorEngine();
+
+		calc.pressDigit("1");
+		expect(calc.getDisplay()).toBe("1");
+
+		calc.pressDigit("0");
+		expect(calc.getDisplay()).toBe("10");
+	});
+});
+
+describe("Result Handling", () => {
+	it("FR 10.2 displays computed result after equals is pressed", () => {
+		const calc = new HexCalculatorEngine();
+
+		calc.pressDigit("A");
+		calc.pressOperator("+");
+		calc.pressDigit("1");
+
+		const result = calc.pressEquals();
+
+		expect(result).toBe("B");
+		expect(calc.getDisplay()).toBe("B");
+	});
+
+	it("FR 10.3 allows result to be reused in next calculation", () => {
+		const calc = new HexCalculatorEngine();
+
+		calc.pressDigit("A");
+		calc.pressOperator("+");
+		calc.pressDigit("1");
+		calc.pressEquals();
+
+		calc.pressOperator("+");
+		calc.pressDigit("1");
+
+		expect(calc.pressEquals()).toBe("C");
+	});
+});
+
+describe("Calculation History", () => {
+	it("FR 12.1 stores only last 5 calculations", () => {
+		const calc = new HexCalculatorEngine();
+
+		for (let i = 0; i < 6; i++) {
+			calc.pressDigit("1");
+			calc.pressOperator("+");
+			calc.pressDigit("1");
+			calc.pressEquals();
+			calc.pressClearAll();
+		}
+
+		expect(calc.getHistory().length).toBe(5);
+	});
+
+	it("FR 12.2 allows viewing calculation history", () => {
+		const calc = new HexCalculatorEngine();
+
+		calc.pressDigit("A");
+		calc.pressOperator("+");
+		calc.pressDigit("1");
+		calc.pressEquals();
+
+		expect(calc.getHistory().length).toBe(1);
+	});
+
+	it("FR 12.3 stores full expression with result", () => {
+		const calc = new HexCalculatorEngine();
+
+		calc.pressDigit("A");
+		calc.pressOperator("+");
+		calc.pressDigit("1");
+		calc.pressEquals();
+
+		expect(calc.getHistory()[0]).toBe("A + 1 = B");
+	});
+});
+
 describe("Smoke tests", () => {
 	it("routes operations through performHexOperation", () => {
 		expect(performHexOperation("F", "+", "1")).toBe("10");
