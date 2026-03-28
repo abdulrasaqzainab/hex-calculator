@@ -96,6 +96,7 @@ export class HexCalculatorEngine {
 	private storedOperand: string | null = null;
 	private pendingOperator: Operator | null = null;
 	private expression = "";
+	private history: string[] = [];
 
 	getDisplay(): string {
 		return this.currentOperand;
@@ -103,6 +104,10 @@ export class HexCalculatorEngine {
 
 	getExpression(): string {
 		return this.expression;
+	}
+
+	getHistory(): string[] {
+	return this.history;
 	}
 
 	pressDigit(digit: string): void {
@@ -134,16 +139,30 @@ export class HexCalculatorEngine {
 	}
 
 	pressEquals(): string {
-		if (this.pendingOperator === null || this.storedOperand === null) {
-			return this.currentOperand;
-		}
+	if (this.pendingOperator === null || this.storedOperand === null) {
+		return this.currentOperand;
+	}
 
-		const result = performHexOperation(this.storedOperand, this.pendingOperator, this.currentOperand);
-		this.expression = `${this.storedOperand} ${this.pendingOperator} ${this.currentOperand} = ${result}`;
-		this.currentOperand = result;
-		this.storedOperand = null;
-		this.pendingOperator = null;
-		return result;
+	const result = performHexOperation(
+		this.storedOperand,
+		this.pendingOperator,
+		this.currentOperand
+	);
+
+	const record = `${this.storedOperand} ${this.pendingOperator} ${this.currentOperand} = ${result}`;
+
+	this.history.unshift(record);
+
+	if (this.history.length > 5) {
+		this.history.pop();
+	}
+
+	this.expression = record;
+	this.currentOperand = result;
+	this.storedOperand = null;
+	this.pendingOperator = null;
+
+	return result;
 	}
 
 	pressClearAll(): void {
