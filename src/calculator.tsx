@@ -177,7 +177,7 @@ export class HexCalculatorEngine {
 			this.currentOperand = "0";
 			return;
 		}
-
+//comment
 		this.currentOperand = this.currentOperand.slice(0, -1);
 	}
 }

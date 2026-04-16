@@ -7,7 +7,7 @@ module.exports = {
     "^../src/(.*)$": "<rootDir>/src/$1",
   },
   testMatch: ["**/?(*.)+(spec|test).[tj]s?(x)"],
-  collectCoverageFrom: ['src/**/*.ts'],
+    collectCoverageFrom: ['src/**/*.ts'],
   coverageReporters: ['text', 'html', 'lcov', 'jest-junit'],
   coverageThreshold: {
     global: {
@@ -16,5 +16,5 @@ module.exports = {
       lines: 80,
       statements: 80
     }
-  },
+  }
 };
