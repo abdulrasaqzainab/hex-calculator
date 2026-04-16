@@ -142,7 +142,7 @@ export class HexCalculatorEngine {
 	if (this.pendingOperator === null || this.storedOperand === null) {
 		return this.currentOperand;
 	}
-
+//another comment
 	const result = performHexOperation(
 		this.storedOperand,
 		this.pendingOperator,
