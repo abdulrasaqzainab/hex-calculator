@@ -1,6 +1,0 @@
-section 2 videos
--what do tests mean, unit
--testing categories
--red tests
--green tests
--detailed actions

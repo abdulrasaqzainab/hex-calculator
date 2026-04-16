@@ -3,8 +3,18 @@ module.exports = {
   testEnvironment: "node",
   roots: ["<rootDir>/tests"],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
-  testMatch: ["**/*.test.ts", "**/*.test.tsx"],
   moduleNameMapper: {
     "^../src/(.*)$": "<rootDir>/src/$1",
   },
+  testMatch: ["**/?(*.)+(spec|test).[tj]s?(x)"],
+    collectCoverageFrom: ['src/**/*.ts'],
+  coverageReporters: ['text', 'html', 'lcov', 'jest-junit'],
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80
+    }
+  }
 };
