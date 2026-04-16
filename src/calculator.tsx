@@ -156,7 +156,7 @@ export class HexCalculatorEngine {
 	if (this.history.length > 5) {
 		this.history.pop();
 	}
-
+//another comment
 	this.expression = record;
 	this.currentOperand = result;
 	this.storedOperand = null;
