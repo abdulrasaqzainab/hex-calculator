@@ -15,7 +15,7 @@ import {
 describe("Arithmetic Operations", () => {
 	describe("FR 1 - Addition", () => {
 		it("FR 1.1 adds two hexadecimal operands", () => {
-			expect(addHex("A", "5")).toBe("F");
+			expect(addHex("A", "5")).toBe("F"); //comment
 		});
 
 		it("FR 1.2 handles addition with zero", () => {

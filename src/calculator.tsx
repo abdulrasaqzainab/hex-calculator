@@ -6,7 +6,7 @@ const SIGNED_HEX_REGEX = /^-?[0-9A-F]{1,2}$/;
 const MAX_OUTPUT_VALUE = 0xffff;
 
 export function normalizeHex(input: string): string {
-	return input.trim().toUpperCase();
+	return input.trim().toUpperCase();//comment
 }
 
 export function isValidHexChar(char: string): boolean {
@@ -142,7 +142,7 @@ export class HexCalculatorEngine {
 	if (this.pendingOperator === null || this.storedOperand === null) {
 		return this.currentOperand;
 	}
-
+//another comment
 	const result = performHexOperation(
 		this.storedOperand,
 		this.pendingOperator,
@@ -156,7 +156,7 @@ export class HexCalculatorEngine {
 	if (this.history.length > 5) {
 		this.history.pop();
 	}
-
+//another comment
 	this.expression = record;
 	this.currentOperand = result;
 	this.storedOperand = null;
@@ -177,7 +177,7 @@ export class HexCalculatorEngine {
 			this.currentOperand = "0";
 			return;
 		}
-
+//comment
 		this.currentOperand = this.currentOperand.slice(0, -1);
 	}
 }
