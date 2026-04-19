@@ -6,7 +6,7 @@ const SIGNED_HEX_REGEX = /^-?[0-9A-F]{1,2}$/;
 const MAX_OUTPUT_VALUE = 0xffff;
 
 export function normalizeHex(input: string): string {
-	return input.trim().toUpperCase();
+	return input.trim().toUpperCase();//comment
 }
 
 export function isValidHexChar(char: string): boolean {
