@@ -5,9 +5,18 @@ on:
     branches:
       - main
       - dev
-      - section_**
+      - section_1
+      - section_2
+      - section_3
+      - section_4
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+      - dev
+      - section_1
+      - section_2
+      - section_3
+      - section_4
 
 jobs:
    test:
