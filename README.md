@@ -6,8 +6,8 @@ This project forms part of the workshop assignment and focuses on the developmen
 
 ## Video Folders
 
-- [Section 1 - Identifying functional requirements and setting up the repository](videos/Identifying%20functional%20requirements%20and%20setting%20up%20the%20repository/)
-- [Section 2 - Writing tests, drafting code](videos/Writing%20tests,%20drafting%20code/)
+- [Section 1 - Identifying functional requirements and setting up the repository](https://github.com/abdulrasaqzainab/hex-calculator/tree/main/videos/section_1)
+- [Section 2 - Writing tests, drafting code](https://github.com/abdulrasaqzainab/hex-calculator/tree/main/videos/section_2)
 
 # Functional Requirements
 
