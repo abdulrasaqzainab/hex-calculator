@@ -1,2 +1,6 @@
 node_modules/
 coverage/
+
+# Prevent accidentally committed TS output (can shadow TS/TSX sources)
+src/*.js
+src/*.js.map
