@@ -5,4 +5,7 @@ coverage/
 src/*.js
 src/*.js.map
 
-tests/__pycache__/
+# Python cache/bytecode
+__pycache__/
+*.py[cod]
+*.pyo
