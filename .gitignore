@@ -4,3 +4,5 @@ coverage/
 # Prevent accidentally committed TS output (can shadow TS/TSX sources)
 src/*.js
 src/*.js.map
+
+tests/_pycache__/
