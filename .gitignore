@@ -5,4 +5,4 @@ coverage/
 src/*.js
 src/*.js.map
 
-tests/_pycache__/
+tests/__pycache__/
