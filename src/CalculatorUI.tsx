@@ -53,7 +53,7 @@ export function Calculator() {
 			console.error(error);
 		}
 	};
-
+error::rrrr
 	return (
 		<div className="calculator-container">
 			<div className={`history-panel`}>
