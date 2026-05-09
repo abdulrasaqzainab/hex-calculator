@@ -54,6 +54,7 @@ export function Calculator() {
 		}
 	};
 
+	
 	return (
 		<div className="calculator-container">
 			<div className={`history-panel`}>
