@@ -1,18 +1,28 @@
 {
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^25.5.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
     "husky": "^9.1.7",
     "jest": "^30.3.0",
     "jest-junit": "^16.0.0",
     "lint-staged": "^16.4.0",
     "ts-jest": "^29.4.6",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vite": "^5.2.8"
   },
   "name": "hex-calculator",
   "version": "1.0.0",
   "private": "true",
   "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
     "test": "jest --runInBand",
     "test:coverage": "jest --coverage --watchAll=false",
     "prepare": "husky"
