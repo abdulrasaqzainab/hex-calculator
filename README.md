@@ -8,6 +8,7 @@ This project forms part of the workshop assignment and focuses on the developmen
 
 - [Section 1 - Identifying functional requirements and setting up the repository](https://github.com/abdulrasaqzainab/hex-calculator/tree/main/videos/section_1)
 - [Section 2 - Writing tests, drafting code](https://github.com/abdulrasaqzainab/hex-calculator/tree/main/videos/section_2)
+- [Section 3 - Testing GUI](https://github.com/abdulrasaqzainab/hex-calculator/tree/main/videos/section_3)
 
 # Functional Requirements
 
