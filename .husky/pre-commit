@@ -1,1 +1,19 @@
+#!/bin/sh
+
+# Run npm test
+echo "Running npm tests..."
 npm test
+if [ $? -ne 0 ]; then
+    echo "npm tests failed"
+    exit 1
+fi
+
+# Run pytest
+echo "Running pytest..."
+python -m pytest tests/ -v
+if [ $? -ne 0 ]; then
+    echo "Pytest failed"
+    exit 1
+fi
+
+exit 0
