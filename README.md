@@ -4,6 +4,22 @@
 
 This project forms part of the workshop assignment and focuses on the development of a **Hexadecimal Calculator** using the **Test-Driven Development (TDD)** approach.
 
+## Docker
+
+Build a production image (static build served by Nginx):
+
+```bash
+docker build -t hex-calculator .
+```
+
+Run it locally:
+
+```bash
+docker run --rm -p 8080:80 hex-calculator
+```
+
+Then open http://localhost:8080
+
 ## Video Folders
 
 - [Section 1 - Identifying functional requirements and setting up the repository](https://github.com/abdulrasaqzainab/hex-calculator/tree/main/videos/section_1)

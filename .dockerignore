@@ -1,0 +1,23 @@
+# dependencies
+node_modules
+
+# build output
+dist
+
+# test / coverage
+coverage
+.pytest_cache
+junit.xml
+
+# VCS / editor
+.git
+.vscode
+
+# misc
+*.log
+
+# workshop assets not needed for build
+videos
+docs
+lint
+tests
