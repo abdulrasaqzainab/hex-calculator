@@ -22,9 +22,13 @@ Then open http://localhost:8080
 
 ## Video Folders
 
-- [Section 1 - Identifying functional requirements and setting up the repository](https://github.com/abdulrasaqzainab/hex-calculator/tree/main/videos/section_1)
-- [Section 2 - Writing tests, drafting code](https://github.com/abdulrasaqzainab/hex-calculator/tree/main/videos/section_2)
-- [Section 3 - Testing GUI](https://github.com/abdulrasaqzainab/hex-calculator/tree/main/videos/section_3)
+- [Section 1 - Identifying functional requirements and setting up the repository](https://github.com/abdulrasaqzainab/hex-calculator/tree/section-4/videos/section_1)
+- [Section 2 - Writing tests, drafting code](https://github.com/abdulrasaqzainab/hex-calculator/tree/section-4/videos/section_2)
+- [Section 3 - Testing GUI](https://github.com/abdulrasaqzainab/hex-calculator/tree/section-4/videos/section_3)
+- [Section 4 -  Porting into containers and cloud service](https://github.com/abdulrasaqzainab/hex-calculator/tree/section-4/videos/section_4)
+
+## Deployment Guide
+- [Elastic Beanstalk Guide](https://github.com/abdulrasaqzainab/hex-calculator/tree/section-4/Guide_%20Deploy%20to%20AWS%20Elastic%20Beanstalk.pdf)
 
 # Functional Requirements
 
